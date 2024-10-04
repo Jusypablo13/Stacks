@@ -15,18 +15,18 @@ class Stack{
         Stack(): topNode(nullptr){};
 
         void push(int value){
-            Node* newNode = new Node();
-            newNode->data = value;
-            newNode->next = topNode;
-            topNode = newNode;
+            Node* newNode = new Node(); // Sirve para crear un nuevo nodo
+            newNode->data = value; // Sirve para asignar el valor al nodo
+            newNode->next = topNode; // Sirve para asignar el siguiente nodo
+            topNode = newNode; // Sirve para asignar el nuevo nodo como el nodo de arriba
         }
 
         void pop(){
             if(isEmpty()){
                 cout << "Stack is empty" << endl;
             }
-            Node* temp = topNode;
-            topNode = topNode->next;
+            Node* temp = topNode; // Sirve para guardar el nodo de arriba
+            topNode = topNode->next; // Sirve para asignar el siguiente nodo como el nodo de arriba
             delete temp;
         }
 
@@ -41,6 +41,5 @@ class Stack{
             return topNode == nullptr;
         }
 };
-
 
 #endif
