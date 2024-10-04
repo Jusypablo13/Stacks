@@ -40,6 +40,12 @@ class Stack{
         bool isEmpty(){
             return topNode == nullptr;
         }
+
+        ~Stack(){
+            while(!isEmpty()){
+                pop();
+            }
+        }
 };
 
 #endif
